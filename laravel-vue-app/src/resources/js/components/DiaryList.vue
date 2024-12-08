@@ -1,18 +1,9 @@
 <template>
     <h3>釣り日記</h3>
-    <!-- <div id="app">
-        <table border>
-            <tr>
-                <th v-for="h in tableHeader" v-bind:name="h.id">{{h.text}}</th>
-            </tr>
-            <tr v-for="d in tableData">
-                <td v-for="h in tableHeader" v-bind:name="h.id">{{d[h.id]}}</td>
-            </tr>
-        </table>
-    </div> -->
+    
 </template>
 
-<script setup>
+<script>
 import { ref } from "vue"
 
 /** 取得日記データ */
