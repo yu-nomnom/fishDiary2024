@@ -1,9 +1,7 @@
 import "./bootstrap";
 import { createApp } from "vue";
 import { createVuetify } from 'vuetify';
-import App from "./components/App.vue"
-// import router from './router';
-// import Welcome from "./components/Welcome.vue";
+import App from "./components/App.vue";
 import '@mdi/font/css/materialdesignicons.css';
 import 'vuetify/dist/vuetify.min.css';
 
