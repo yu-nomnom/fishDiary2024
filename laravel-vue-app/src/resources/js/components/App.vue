@@ -1,5 +1,9 @@
 <template>
-    <h3>釣り日記</h3>
+    <v-app>
+        <v-main>
+            <router-view />
+        </v-main>
+    </v-app>
 </template>
 <script>
 </script>

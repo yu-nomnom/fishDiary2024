@@ -1,19 +1,23 @@
 <template>
-    <h3>釣り日記</h3>
+    <h3>釣り日記aaa</h3>
     
 </template>
 
-<script>
-import { ref } from "vue"
+<script setup>
+import { ref, onMounted } from 'vue'
 
 /** 取得日記データ */
 const diaries = ref<[]>([]);
 
-/** 表示用データ */
-
-/**  */
+onMounted(async () => {
+    console.log("onMounted");
+    let res = await axios.get('getDiaryList')
+    diaries.value = res.data
+    console.log('diaries::', diaries);
+})
 
 </script>
+
 
 <style scoped>
 .content {
