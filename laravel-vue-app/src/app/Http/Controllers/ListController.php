@@ -2,16 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Services\DiaryService;
+use Illuminate\Support\Facades\Log;
 
 class ListController extends Controller
 {
-    private DiaryService $diaryService;
+    protected DiaryService $diaryService;
 
-    /**
-     * @var DiaryService $diaryService
-     */
     public function __construct(
         DiaryService $diaryService
     ) {
@@ -25,6 +22,7 @@ class ListController extends Controller
      */
     public function getDiaryList()
     {
+        Log::debug("getDiaryList");
         $data = $this->diaryService->getAllDiary();
 
         return $data;

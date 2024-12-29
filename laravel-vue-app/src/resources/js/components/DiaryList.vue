@@ -7,13 +7,18 @@
 import { ref, onMounted } from 'vue'
 
 /** 取得日記データ */
-const diaries = ref<[]>([]);
+const diaries = ref([]);
 
 onMounted(async () => {
-    console.log("onMounted");
-    let res = await axios.get('getDiaryList')
-    diaries.value = res.data
-    console.log('diaries::', diaries);
+    try {
+        console.log("onMounted");
+        await axios.get('getDiaryList').then(response => {
+            console.log("response.data::", response.data);
+            diaries.value = response.data;
+        });
+    } catch(error) {
+        window.alert(error);
+    }
 })
 
 </script>
